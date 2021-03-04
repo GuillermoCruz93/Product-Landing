@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f1f1f1;
+}
+
+nav {
+    background: #222;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+menu li {
+    font-size: 1em;
+    padding: .9em .3em;
+    white-space: nowrap;
+}
+
+
+
+#header-img{
+    width: 11vw;
+    
+}
+
+/*Menu para celulares*/
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.item.button {
+    padding: 0em 1em;
+    order: 1;
+}
+
+.nav-link {
+    width: 100%;
+    text-align: center;
+    order: 2;
+    display: none;
+}
+
+
+
+/*Menu tabletas*/
+@media all and (min-width:600px) {
+    .menu {
+        justify-content: center;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .toggle {
+        flex: 1;
+        text-align: right;
+    }
+
+    .item.button {
+        width: auto;
+        order: 0;
+        display: block;
+    }
+
+    .button.secondary {
+        border: 0;
+    }
+
+    .button a {
+        padding: .5em 1em;
+        background: teal;
+        border: 1px #006d6d solid;
+    }
+
+    .button.secondary a {
+        background: transparent;
+    }
+
+    .button a:hover {
+        text-decoration: none;
+    }
+
+    .button:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+
+    .button.secondary a:hover {
+        color: #ddd;
+    }
+
+    .menu li
+    {padding: 1em .4em;}
+
+    .nav-link{
+        display: block ;
+        width: auto;
+        order: 1;
+    }
+
+    .menu li.button{
+        padding: 0;
+    }
+   
+    #header-img{
+        max-width: 3.2em;
+    }
+}
