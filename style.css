@@ -39,13 +39,20 @@ menu li {
 }
 
 #header-img {
-    width: 11vw;
+    width: 20vw;
 
 }
-
+#header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    font-size: 1.5em;
+}
 #container{
  display: grid;
  grid-template-columns: repeat(12,1fr);
+ padding-top: 7em;
+ width: 100vw;
 }
 
 #home{
@@ -53,28 +60,101 @@ menu li {
     padding: 2em 1em;
     grid-column: 1/13;
     border-radius: 10%;
+    
 }
 #home>h1{
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
+}
+#home>p{
+    font-size: 2em;
 }
 
 #about{
     display: grid;
     grid-column: 1/13;    
     grid-template-columns: repeat(5, 1fr) ;
+    justify-items: center;
 }
 #about>img{
     padding-top: 2em;
-    width: 100%;
+    width: 70%;
     grid-column: 2/5;
     }
 #about>p{
     grid-column: 1/6;
-    padding: 1em 2em;
+    padding: 1em 3em;
+    font-size: 1.8em;
 }
 
-/*Menu para celulares*/
+.form{
+    display: grid;
+    grid-column: 1/13;
+    grid-template-columns: repeat(5,1fr);
+ 
+    background: rgba(255, 253, 253, 0.3);
+    border-radius: 10%;
+    margin: 2em 2em;
+}
+form{
+    grid-column: 2/5;    
+}
+.form>h1{
+    grid-column: 2/5;
+    text-align: center;
+    padding-top: 1.6em;
+}
+#email{
+    width: 100%;
+    margin-top: 1em;
+}
+#submit{
+    margin-top: .5em;
+    width: 40%;
+    margin-bottom: 4em;
+}
+
+#video{
+    width: 0;
+}
+.video{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1/13;
+}
+ iframe{
+     margin-top: 2em;
+     margin-bottom: 2em;
+     width: 100%;
+     grid-column: 2/12;
+ }
+
+ #price{
+     grid-column: 1/13;
+     grid-template-columns: repeat(8, 1fr);
+     display: grid;
+ }
+ #price>div{
+     grid-column: 2/8;
+     border: cornsilk 1px solid;
+     margin: 1em 0em;
+     text-align: center;
+ }
+ 
+ #price>div>.price{
+     font-size: 3.5em;
+    text-align: center;
+    padding: .7em 0em;
+    font-weight: bold;
+    }
+
+#price>div>h1{
+    font-size: 2.5em;
+    background-color: rgba(128, 123, 123, 0.7);
+}
+#price>div>p{
+    font-size: 1.5em;
+}
 
 .menu {
     display: flex;
@@ -96,10 +176,20 @@ menu li {
     display: none;
 }
 
+#footer{
+    background-color: rgba(128, 123, 123, 0.7);
+    grid-column: 1/13;
+    text-align: center;
+    padding: 1em 1em;
+    text-align: 2em;
+}
 
 
-/*Tabletas*/
-@media all and (min-width:600px) {
+
+/* Tablets (portrait) -------------------- */
+@media only screen 
+and (min-device-width : 768px) 
+{
     .menu {
         justify-content: center;
     }
@@ -162,5 +252,46 @@ menu li {
 
     #header-img {
         max-width: 3.2em;
+    }
+
+    #home{
+        grid-column: 3/11;
+    }
+
+    #about{
+        grid-template-columns: repeat(12, 1fr);
+    }
+    #about>img{
+        margin: 2em 2em;
+        width: 100%;
+        grid-column: 3/5;
+        align-self: center;
+        }
+    #about>p{
+        align-self: center;
+        grid-column: 5/12;
+        padding: 3em 3em;
+        font-size: 1.8em;
+    }
+
+    .form{
+       grid-column: 4/10;
+
+    }
+    
+    iframe{
+        grid-column: 5/9;
+        width: 100%;
+    }
+
+    #price{
+        display: flex;
+       padding: 0em 4em;
+    }
+    #price>div{
+        margin: 1em 1.5em;
+        
+        align-content: center;
+
     }
 }
