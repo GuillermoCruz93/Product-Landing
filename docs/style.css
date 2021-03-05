@@ -12,7 +12,7 @@ body {
     color: white;
     font-family: sans-serif;
     background: white;
-    background-image: url("imagenes/double-bubble-dark.png");
+    background-image: url("../imagenes/double-bubble-dark.png");
 }
 
 nav {
